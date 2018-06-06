@@ -2,6 +2,25 @@
 <html>
 <head>
 
+<script type="text/javascript">
+function allowDrow(ev) {
+  ev.preventDefault();
+}
+
+function drag(ev){
+  ev.dataTrabsfer.setData("Text", ev.target.id);
+}
+
+function drop(ev)
+{
+  ev.preventDefault();
+  var data = ev.dataTrabsfer.getData("Text");
+  ev.target.appendChild(document.getElementById(data));
+}
+
+
+</script>
+
 
 </head>
 <body>
